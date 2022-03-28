@@ -1,0 +1,172 @@
+@use '../utilities/' as *;
+
+.header {
+    background-color: var(--clr-very-light-gray);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    .nav {
+        position: relative;
+        color: var(--clr-gray-blue); 
+        padding: rem(12) 0;
+        
+        @include breakpoint-up('medium') {
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        .nav__logo {
+            width: rem(60);
+        }
+
+        .nav__lists {
+            visibility: hidden;
+            height: 0;
+            position: absolute;
+            @include breakpoint-up('medium') {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                visibility: visible;
+                height: auto;
+                position: relative;
+                margin-top: rem(0);
+            }
+        }
+
+        .nav__lists--visible {
+            visibility: visible;
+            height: auto;
+            color: var(--clr-gray-blue);
+            position: relative;
+            width: 100%;
+            animation: opac .5s linear;
+            margin: rem(24) 0;
+            text-align: center;
+            @include breakpoint-up('medium') {
+                margin: rem(0);
+            }
+        }
+
+        /* The animation for navigation list--visible */
+        @keyframes opac {
+        from { opacity: 0;}
+        to {opacity: 1;}
+        }
+
+
+
+        .nav__item {
+            font-weight: bold;
+            font-size: rem(12);
+            font-family: var(--ff-public-sans);
+            text-transform: uppercase;
+            letter-spacing: rem(2);
+            
+            .nav__link {
+                color: var(--clr-gray-blue);
+                &:hover {
+                    color: var(--clr-cyan);
+                }
+            }
+            .nav__link--active {
+                color: var(--clr-cyan);
+            }
+        }
+
+
+        .nav__item + .nav__item {
+            margin-top: 1em;
+            @include breakpoint-up('medium') {
+                margin-top: 0;
+                margin-left: 1.5em;
+            }
+        }
+
+
+        
+
+        .nav__burger {
+            right: 0;
+            top: rem(20);
+            position: absolute;
+           // background-color: var(--clr-cyan);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            width: rem(24);
+            height: rem(13);
+            border-radius: rem(5);
+            @include breakpoint-up('medium') {
+                display: none;
+            }
+            .nav__burger-lines {
+                width: rem(24);
+                margin: auto;
+                position: relative;
+            }
+            
+            .nav__burger-line {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                display: block;
+                height: rem(2.4);
+                border-radius: rem(5);
+                background-color: var(--clr-gray-blue);
+                transition: transform 0.5s, width 0.5s;
+                &:hover {
+                    background-color: var(--clr-cyan);
+                }
+
+            }
+            
+            .nav__burger-line--1 {
+                transform: translate(-50%, -7px);
+            }
+            
+            .nav__burger-line--2 {
+                width: 100%;
+            }
+            
+            .nav__burger-line--3 {
+                transform: translate(-50%, 5px);
+            }
+        }
+
+    
+
+        /* open nav */
+        
+        .nav--open {
+            .nav__burger-line--1 {
+                transform: translate(-50%, -50%) rotate(-45deg);
+                background-color: var(--clr-cyan);
+            }
+    
+            .nav__burger-line--2 {
+                width: 0;
+            }
+    
+            .nav__burger-line--3 {
+                transform: translate(-50%, -50%) rotate(45deg);
+                background-color: var(--clr-cyan);
+            }
+
+        }
+        
+    }
+
+    
+
+       
+
+        
+        
+
+       
+}
+

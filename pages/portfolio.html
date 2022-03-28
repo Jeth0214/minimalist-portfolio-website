@@ -4,51 +4,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo.svg">
   
-  <title>Frontend Mentor | My Projects</title>
+  <title>Roland Jethro Suyom | Minimalist Portfolio</title>
+
+  <link rel="stylesheet" href="../dist/style.css">
+  <script defer src="../assets/js/script.js"></script>
+  <script defer src="../assets/js/portfolio.js"></script>
 </head>
 <body>
 
-  Home
-  Portfolio
-  Contact Me
+  <header class="header" id="header">
+    <nav class="nav container">
+        <div class="nav__brand">
+          <a href="#about" class="nav__link">
+            <img src="../assets/images/logo.svg" class="nav__logo" alt="website logo">
+          </a>
+        </div>
+        <ul class="nav__lists" id="nav__lists">
+          <li class="nav__item"><a href="../index.html" class="nav__link ">Home</a></li>
+          <li class="nav__item"><a href="./pages/portfolio.html" class="nav__link nav__link--active">Portfolio</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Contact Me</a></li>
+        </ul>
 
-  Manage
+      <button id="nav__toggle" class="nav__burger" aria-label="open navigation">
+        <div class="nav__burger-lines" id="nav__burger-lines">
+            <span class="nav__burger-line nav__burger-line--1"></span>
+            <span class="nav__burger-line nav__burger-line--2"></span>
+            <span class="nav__burger-line nav__burger-line--3"></span>
+        </div>
+      </button> 
+    </nav>
+  </header>
 
-  This project required me to build a fully responsive landing page to the designs provided. 
-  I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, 
-  such as the testimonial slider.
+  
+  <main class="container" id="portfolio">
+    <section id="projects" >
+      <!-- data come from portfolio.js -->
+    </section>
 
-  View Project
+    <section id="contact">
+      <h2 class="contact__title">Interested in doing a project together?</h2>
+      <div class="contact__line">
 
-  Bookmark
+      </div>
+      <a href="#" class="btn btn-secondary">
+        Contact Me
+      </a>
+    </section>
 
-  This project required me to build a fully responsive landing page to the designs provided. I 
-  used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such 
-  as the features section.
+    
+  </main>
 
-  View Project
-
-  Insure
-
-  This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive 
-  landing page. The only JavaScript this project required was to enable the toggling of the 
-  mobile navigation.
-
-  View Project
-
-  Fylo
-
-  This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and 
-  built it so that it was fully-responsive. I took a mobile-first approach and used modern 
-  CSS like Flexbox and Grid for layout purposes.
-
-  View Project
-
-  Interested in doing a project together?
-
-  Contact Me
+  <footer id="footer">
+    <div class="container footer" >
+      <div class="nav__brand">
+        <a href="#" class="nav__link">
+          <img src="../assets/images/light-logo.png" alt="website logo">
+        </a>
+      </div>
+      <ul class="footer__lists">
+        <li class="footer__item"><a href="#" class="footer__link">Home</a></li>
+        <li class="footer__item"><a href="#" class="footer__link">Portfolio</a></li>
+        <li class="footer__item"><a href="#" class="footer__link">Contact Me</a></li>
+      </ul>
+      <div class="social-media__links">
+        <a href="https://github.com/Jeth0214" target="_blank" class="social-media__link"><img src="../assets/images/icons/github.svg" alt="github"></a>
+        <a href="https://twitter.com/JethroSuyom" target="_blank" class="social-media__link"><img src="../assets/images/icons/twitter.svg" alt="twitter"></a>
+        <a href="https://www.linkedin.com/in/roland-jethro-suyom-198a89207/" target="_blank" class="social-media__link"><img src="../assets/images/icons/linkedin.svg" alt="linkedin"></a>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>

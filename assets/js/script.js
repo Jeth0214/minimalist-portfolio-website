@@ -38,8 +38,8 @@ function setBannerImage() {
     }else if(width > 1151) {
         device = "desktop";
     }
-    console.log(width);
-    console.log(device);
+    // console.log(width);
+    // console.log(device);
 
     bannerImage.setAttribute("src", `../assets/images/homepage/${device}/image-homepage-hero.jpg`);
 }

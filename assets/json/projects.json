@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Manage",
+        "images": {
+            "mobile" : "../assets/images/portfolio/mobile/image-portfolio-manage.jpg",
+            "tablet" : "../assets/images/portfolio/tablet/image-portfolio-manage.jpg",
+            "desktop" : "../assets/images/portfolio/desktop/image-portfolio-manage.jpg"
+        },
+        "description" : "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
+        "link": "https://construction-site-v2.netlify.app",
+        "code": "https://github.com/Jeth0214/ConstructionSite_ProjectEnvato_TeamF__JL/tree/construction-v2"
+
+    },
+    {
+        "name": "Bookmark",
+        "images": {
+            "mobile" : "../assets/images/portfolio/mobile/image-portfolio-bookmark.jpg",
+            "tablet" : "../assets/images/portfolio/tablet/image-portfolio-bookmark.jpg",
+            "desktop" : "../assets/images/portfolio/desktop/image-portfolio-bookmark.jpg"
+        },
+        "description" : "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.",
+        "link": "https://crl-final-challenge-solution.netlify.app",
+        "code": "https://github.com/Jeth0214/CRL-final-challenge-solution"
+
+    },
+    {
+        "name": "Insure",
+        "images": {
+            "mobile" : "../assets/images/portfolio/mobile/image-portfolio-insure.jpg",
+            "tablet" : "../assets/images/portfolio/tablet/image-portfolio-insure.jpg",
+            "desktop" : "../assets/images/portfolio/desktop/image-portfolio-insure.jpg"
+        },
+        "description" : "This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.",
+        "link": "https://gallant-feynman-da0d97.netlify.app",
+        "code": "https://github.com/Jeth0214/FEM-four-card-feature"
+
+    },
+    {
+        "name": "Fylo",
+        "images": {
+            "mobile" : "../assets/images/portfolio/mobile/image-portfolio-fylo.jpg",
+            "tablet" : "../assets/images/portfolio/tablet/image-portfolio-fylo.jpg",
+            "desktop" : "../assets/images/portfolio/desktop/image-portfolio-fylo.jpg"
+        },
+        "description" : "This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.",
+        "link": "https://fem-huddle-single-landing-page.netlify.app",
+        "code": "https://github.com/Jeth0214/FEM-huddle-landing-page-single"
+
+    }
+    
+]

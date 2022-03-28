@@ -57,3 +57,14 @@
         color: #FFF;
     }
 }
+
+.btn-secondary--fill {
+    @extend .btn;
+    border: 1px solid var(--clr-dark-blue);
+    transition: all .3s ease-in-out;
+    background-color: var(--clr-dark-blue);
+    color: #FFF;
+    &:hover {
+        background-color: var(--clr-bright-red );
+    }
+}

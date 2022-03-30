@@ -6,36 +6,101 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Minimalist Portfolio</title>
+  <title>Roland Jethro Suyom | Minimalist Portfolio</title>
 
-  <link rel="stylesheet" href="./assets/styles/style.css">
+  <link rel="stylesheet" href="/dist/style.css">
   <script defer src="./assets/js/script.js"></script>
+  <script defer src="./assets/js/home.js"></script>
 </head>
 <body>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+        <div class="nav__brand">
+          <a href="#about" class="nav__link">
+            <img src="./assets/images/logo.svg" class="nav__logo" alt="website logo">
+          </a>
+        </div>
+        <ul class="nav__lists" id="nav__lists">
+          <li class="nav__item"><a href="index.html" class="nav__link nav__link--active">Home</a></li>
+          <li class="nav__item"><a href="/portfolio.html" class="nav__link">Portfolio</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Contact Me</a></li>
+        </ul>
+
+      <button id="nav__toggle" class="nav__burger" aria-label="open navigation">
+        <div class="nav__burger-lines" id="nav__burger-lines">
+            <span class="nav__burger-line nav__burger-line--1"></span>
+            <span class="nav__burger-line nav__burger-line--2"></span>
+            <span class="nav__burger-line nav__burger-line--3"></span>
+        </div>
+      </button> 
+    </nav>
+  </header>
   
-  Home
-  Portfolio
-  Contact Me
+  <main class="container">
+    <section class="banner">
+      <div class="banner__images">
+        <img src="" alt="" id="banner__image">
+      </div>
+      <div class="banner__heading">
+        <h1 class="banner__title">Hey, I’m Roland Jethro Suyom and I love building beautiful websites</h1>
+        <a href="#about" class="btn btn-cta">
+          <img src="./assets/images/icons/down-arrows.svg" class="down-arrow">
+          About Me
+        </a>
+      </div>
+    </section>
 
-  Hey, I’m Alex Spencer and I love building beautiful websites
+    <section id="about">
+      <div class="about__image">
+        <img class="about__pic" src="./assets/images/homepage/desktop/image-homepage-profile@2x.jpg" alt="Roland Jethro Suyom">
+      </div>
+      <div class="about__description">
+        <h2 class="h2">About Me</h2>
+        <p>
+          I’m a junior front-end developer looking for a new role in an exciting company. 
+          I focus on writing accessible HTML, using modern CSS practices and writing clean 
+          JavaScript. When writing JavaScript code, I mostly use Angular, but I can adapt to 
+          whatever tools are required. I’m currently based in Alkhobar, Saudi Arabia, but I’m happy working remotely 
+          and have experience in remote teams. I’d love  you to check out my work.
+        </p>
 
-  About Me
+        <a href="#" class="btn btn-secondary">
+          Go to Portfolio
+        </a>
+      </div>
+    </section>
 
-  About Me
+    <section id="contact">
+      <h2 class="contact__title">Interested in doing a project together?</h2>
+      <div class="contact__line">
 
-  I’m a junior front-end developer looking for a new role in an exciting company. 
-  I focus on writing accessible HTML, using modern CSS practices and writing clean 
-  JavaScript. When writing JavaScript code, I mostly use React, but I can adapt to 
-  whatever tools are required. I’m based in London, UK, but I’m happy working remotely 
-  and have experience in remote teams. When I’m not coding, you’ll find me outdoors. 
-  I love being out in nature whether that’s going for a walk, run or cycling. I’d love 
-  you to check out my work.
-
-  Go to Portfolio
-
-  Interested in doing a project together?
-
-  Contact Me
-
+      </div>
+      <a href="#" class="btn btn-secondary">
+        Contact Me
+      </a>
+    </section>
+  </main>
+  
+  <footer id="footer">
+    <div class="container footer" >
+      <div class="nav__brand">
+        <a href="#" class="nav__link">
+          <img src="./assets/images/light-logo.png" alt="website logo">
+        </a>
+      </div>
+      <ul class="footer__lists">
+        <li class="footer__item"><a href="index.html" class="footer__link">Home</a></li>
+        <li class="footer__item"><a href="/portfolio.html" class="footer__link">Portfolio</a></li>
+        <li class="footer__item"><a href="#" class="footer__link">Contact Me</a></li>
+      </ul>
+      <div class="social-media__links">
+        <a href="https://github.com/Jeth0214" target="_blank" class="social-media__link"><img src="./assets/images/icons/github.svg" alt="github"></a>
+        <a href="https://twitter.com/JethroSuyom" target="_blank" class="social-media__link"><img src="./assets/images/icons/twitter.svg" alt="twitter"></a>
+        <a href="https://www.linkedin.com/in/roland-jethro-suyom-198a89207/" target="_blank" class="social-media__link"><img src="./assets/images/icons/linkedin.svg" alt="linkedin"></a>
+      </div>
+    </div>
+  </footer>
+  
 </body>
 </html>

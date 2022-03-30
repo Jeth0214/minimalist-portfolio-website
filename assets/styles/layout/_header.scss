@@ -1,6 +1,7 @@
 @use '../utilities/' as *;
 
 .header {
+    background-color: var(--clr-very-light-gray);
     position: fixed;
     width: 100%;
     top: 0;

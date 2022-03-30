@@ -59,12 +59,13 @@
         align-content: center;
         align-items: center;
         text-align: left;
+        gap: rem(32);
     }
     .contact__title {
         padding-inline: rem(36);
         
         @include breakpoint-up('medium') {
-        width: 50%;
+        width: rem(370);
         padding-inline: 0;
         }
     }
@@ -75,13 +76,7 @@
             height: 1px;
             background-color: var(--clr-light-gray);
             align-self: center;
-            width: 25%;
-        }
-        
-    }
-    .btn-secondary {
-        @include breakpoint-up('medium') {
-            width: 23%;
+            flex: 1;
         }
         
     }

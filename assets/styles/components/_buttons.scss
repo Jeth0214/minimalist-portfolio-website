@@ -68,3 +68,16 @@
         background-color: var(--clr-bright-red );
     }
 }
+
+.btn-submit {
+    @extend .btn;
+    color: #FFF;
+    background-color: var(--clr-dark-blue);
+    transition: all .3s ease-in-out;
+    outline: none;
+    border: 1px solid var(--clr-gray-blue);
+    &:hover {
+        background-color: var(--clr-cyan);
+        border: 1px solid var(--clr-cyan);
+    }
+}

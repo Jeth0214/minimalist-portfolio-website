@@ -1,46 +1,55 @@
-//console.log('portfolio');
 
-async function getProjectsData(){
-    let projects;
-    let newPromise = new Promise( (resolve) => {
-        let req = new XMLHttpRequest();
-        req.open('GET', "../assets/json/projects.json", true);
-        req.onload = () => {
-            if(req.readyState == 4 && req.status === 200){
-                resolve(req.response);
-;            } else {
-                resolve("File Not Found");
-            }
-        };
-        req.send();
-    })
-
-    const data = await newPromise;
+async function renderProjectsToTheView(width){
+    let projects = {};
+    let device = ""
+    let response  = await fetch("../assets/json/projects.json");
+    if(response.status === 200){
+        data = await response.text()
+    }else {
+        console.log("Error", response.statusText)
+    }
     projects = JSON.parse(data);
-   // console.log(projects);
-    renderProject(projects);
+    device = checkDevice(width);
+    getProjectsData(projects, device)
 }
 
-getProjectsData();
-const renderProject = (projects) => {
+const getProjectsData = (projects, device) => {
     const portfolio = document.querySelector("#projects");
     let output = '';
+    //console.log(device);
     for(let  project of projects){
-        output += `
+         output += `
         <div class="project">
             <div class="project__image">
-                <img src="${project.images.desktop}" alt="${project.name}">
+                <img src="../assets/images/portfolio/${device}/image-portfolio-${project.name.toLowerCase()}@2x.jpg" alt="${project.name}">
             </div>
             <div class="project__body">
                 <h1>${project.name}</h1>
                 <p>${project.description}</p>
-                <div class="buttons">
-                    <a target="blank" href="${project.link}" class="btn btn-secondary">View Project</a>
-                    <a target="blank" href="${project.code}" class="btn btn-secondary--fill">View Code</a>
-                </div>
+                <a  href="/projects/${project.name.toLowerCase()}.html" class="btn btn-secondary">View Project</a>
             </div>
         </div>
         `
     }
     portfolio.innerHTML = output;
 }
+
+const checkDevice = (width) => {
+    let device = "";
+    if(width < 376){
+        device = "mobile"
+    }else if(width > 375 && width < 1150) {
+            device = "tablet";
+    }else if(width > 1151) {
+        device = "desktop";
+    }
+    return device;
+}
+
+window.onload = () => {
+    renderProjectsToTheView(window.innerWidth);
+}
+window.onresize = () => {
+    renderProjectsToTheView(window.innerWidth);
+}
+

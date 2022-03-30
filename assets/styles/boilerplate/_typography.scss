@@ -32,3 +32,13 @@ p {
     margin-bottom: rem(24);
     line-height: 2;
 }
+
+.text-primary {
+    color: var(--clr-cyan);
+}
+
+.text-light {
+    color: var(--clr-dark-blue);
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}

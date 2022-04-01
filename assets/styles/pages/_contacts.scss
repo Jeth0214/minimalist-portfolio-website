@@ -1,0 +1,34 @@
+@use '../utilities/' as *;
+
+#contact {
+    margin: rem(95) auto rem(80);
+    .contact__message {
+        padding: 25px 0 32px; 
+        .social-media__link {
+            font-size: 24px;
+            color: var(--clr-dark-blue);
+            &:hover {
+                color: var(--clr-cyan);
+            }
+        }
+        .social-media__link + .social-media__link {
+            margin-left: 15px;
+        }
+    }
+    .contact__form {
+        padding: 24px 0;
+       
+    }
+
+    .contact__form, .contact__message {
+        h2 {
+            flex: 1;
+        }
+        div {
+            flex: 13%;
+        }
+        @include breakpoint-up('large'){
+            display: flex;
+        }
+    }
+}

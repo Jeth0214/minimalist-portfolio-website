@@ -92,7 +92,7 @@ p {
   margin: 24px 0;
 }
 .form__group .form__label {
-  color: #33323e;
+  color: hsl(245deg, 11%, 22%);
 }
 .form__group .form__control {
   display: block;

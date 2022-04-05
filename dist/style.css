@@ -664,6 +664,18 @@ p {
 #contact {
   margin: 5.9375rem auto 5rem;
 }
+#contact #toaster {
+  position: fixed;
+  padding: 16px;
+  background-color: var(--clr-cyan);
+  right: 0;
+  z-index: 1;
+  color: var(--clr-dark-blue);
+  opacity: 0;
+}
+#contact #toaster p {
+  margin: 0;
+}
 #contact .contact__message {
   padding: 25px 0 32px;
 }

@@ -14,10 +14,8 @@ const submitForm = (e) => {
     sendEmail(e);
 }
 
-const sendEmail = async (e) => {
-    
+const sendEmail = async (e) => { 
     var data = new FormData(e.target);
-    let status = "";
     fetch(e.target.action, {
       method: contactForm.method,
       body: data,
@@ -27,19 +25,11 @@ const sendEmail = async (e) => {
     }).then(response => {
        // console.log(response)
       if (response.ok) {
-        status += "Thanks for your submission!";
+        showToaster();
         contactForm.reset();
-      } else {
-        response.json().then(data => {
-          if (Object.hasOwn(data, 'errors')) {
-            status += data["errors"].map(error => error["message"]).join(", ")
-          } else {
-            status += "Oops! There was a problem submitting your form"
-          }
-        })
       }
     }).catch(error => {
-      status = "Oops! There was a problem submitting your form"
+      console.log( error, "Oops! There was a problem submitting your form");
     });
 
 }
@@ -68,3 +58,10 @@ const validate = (formControl) => {
     
     return errorMessage;
 }
+
+const showToaster = () => {
+    const toaster = document.getElementById("toaster");
+    toaster.style.opacity = "1";
+    setTimeout(()=> {toaster.style.opacity = "0";}, 2000)
+}
+

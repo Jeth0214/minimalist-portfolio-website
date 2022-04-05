@@ -42,3 +42,9 @@ p {
     mix-blend-mode: normal;
     opacity: 0.5;
 }
+
+.text-error {
+    color: var(--clr-bright-red);
+    font-weight: 700;
+    font-style: italic;
+}

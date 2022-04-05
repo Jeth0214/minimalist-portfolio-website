@@ -6,7 +6,7 @@
   --clr-gray-blue: hsl(245, 11%, 22%);
   --clr-very-light-gray: hsl(0, 0%, 98%);
   --clr-light-gray: hsl(240, 2%, 92%);
-  --clr-bright-red: hsl(0, 64%, 8%);
+  --clr-bright-red: hsl(0, 90%, 57%);
   /* Font Family */
   --ff-ibarra: "Ibarra Real Nova", serif;
   --ff-public-sans: "Public Sans", sans-serif;
@@ -88,6 +88,12 @@ p {
   opacity: 0.5;
 }
 
+.text-error {
+  color: var(--clr-bright-red);
+  font-weight: 700;
+  font-style: italic;
+}
+
 .form__group {
   margin: 24px 0;
 }
@@ -105,11 +111,18 @@ p {
   outline: none;
 }
 .form__group .form__control:focus {
-  border: 3px solid var(--clr-cyan);
+  border: 2px solid var(--clr-cyan);
   color: var(--clr-dark-blue);
 }
 .form__group textarea {
   font-family: var(--ff-public-sans);
+}
+.form__group .form__active {
+  border: 2px solid var(--clr-cyan);
+  color: var(--clr-dark-blue);
+}
+.form__group .form__error {
+  border: 2px solid var(--clr-bright-red);
 }
 
 .btn, .btn-submit, .btn-secondary--fill, .btn-secondary, .btn-cta--disabled, .btn-cta {

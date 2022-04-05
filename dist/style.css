@@ -114,6 +114,9 @@ p {
   border: 2px solid var(--clr-cyan);
   color: var(--clr-dark-blue);
 }
+.form__group .form__control:valid {
+  color: var(--clr-dark-blue);
+}
 .form__group textarea {
   font-family: var(--ff-public-sans);
 }
@@ -660,6 +663,18 @@ p {
 
 #contact {
   margin: 5.9375rem auto 5rem;
+}
+#contact #toaster {
+  position: fixed;
+  padding: 16px;
+  background-color: var(--clr-cyan);
+  right: 0;
+  z-index: 1;
+  color: var(--clr-dark-blue);
+  opacity: 0;
+}
+#contact #toaster p {
+  margin: 0;
 }
 #contact .contact__message {
   padding: 25px 0 32px;

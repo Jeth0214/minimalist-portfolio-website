@@ -2,6 +2,18 @@
 
 #contact {
     margin: rem(95) auto rem(80);
+    #toaster {
+        position: fixed;
+        padding: 16px;
+        background-color: var(--clr-cyan);
+        right: 0;
+        z-index: 1;
+        color: var(--clr-dark-blue);
+        opacity: 0;
+        p {
+            margin: 0;
+        }
+    }
     .contact__message {
         padding: 25px 0 32px; 
         .social-media__link {

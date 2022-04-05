@@ -17,6 +17,9 @@
             border: 2px solid var(--clr-cyan);
             color: var(--clr-dark-blue);
         } 
+        &:valid {
+            color: var(--clr-dark-blue);
+        } 
     }
     textarea {
         font-family: var(--ff-public-sans);

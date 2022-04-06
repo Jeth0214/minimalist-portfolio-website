@@ -1,7 +1,6 @@
 @use '../utilities/' as *;
 
 #project {
-    margin-top : rem(95);
     .project__details {
         margin-top: rem(40);
         @include breakpoint-up('large') {

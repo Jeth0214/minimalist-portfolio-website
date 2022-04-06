@@ -1,7 +1,6 @@
 @use '../utilities/' as *;
 
 .banner {
-    margin-top : rem(95);
     position: relative;
     #banner__image {
         width: 100%;
@@ -25,10 +24,12 @@
     @include breakpoint-up('medium'){
         display: flex;
         justify-content: space-between;
+       // align-items: flex-end;
     }
     .about__image {
         @include breakpoint-up('medium'){
             width: 40%;
+            
         }
         img {
             height: 100%;

@@ -1,8 +1,6 @@
 @use '../utilities/' as *;
 
-#portfolio {
-    margin-top : rem(95);
-    
+#portfolio {    
     .project {
         &:nth-child(even){
             @include breakpoint-up('medium'){

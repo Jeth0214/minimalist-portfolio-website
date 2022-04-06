@@ -9,6 +9,13 @@
             justify-content: space-between;
             align-items: center;
         }
+        .footer__links {
+            @include breakpoint-up('medium') {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
     }
     
     .footer__lists {
@@ -16,7 +23,7 @@
         @include breakpoint-up('medium') {
             display: flex;
             justify-content: space-between;
-            margin: 0;
+            margin: 0 0 0 rem(48);
         }
         .footer__item + .footer__item {
             margin-top: rem(32);

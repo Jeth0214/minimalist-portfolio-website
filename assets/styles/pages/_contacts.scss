@@ -1,7 +1,8 @@
 @use '../utilities/' as *;
 
 #contact {
-    margin: rem(95) auto rem(80);
+    margin-inline: auto;
+    margin-bottom: rem(80);
     #toaster {
         position: fixed;
         padding: 16px;

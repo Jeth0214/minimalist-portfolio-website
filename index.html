@@ -37,9 +37,11 @@
   
   <main class="container main">
     <section class="banner">
-      <div class="banner__images">
-        <img src="" alt="" id="banner__image">
-      </div>
+      <picture class="banner__images">
+        <source media="(min-width: 1110px)" srcset="../assets/images/homepage/desktop/image-homepage-hero.jpg">
+        <source media="(min-width: 768px)" srcset="../assets/images/homepage/tablet/image-homepage-hero.jpg">
+        <img src="./assets/images/homepage/mobile/image-homepage-hero@2x.jpg" alt="" class="banner__image" >
+      </picture>
       <div class="banner__heading">
         <h1 class="banner__title">Hey, I’m Roland Jethro Suyom and I love building beautiful websites</h1>
         <a href="#about" class="btn btn-cta">

@@ -34,8 +34,8 @@
     
         .project__background {
             flex: 1;
-            img + img {
-                margin-top: rem(30);
+            .project__preview-image + .project__preview-image {
+                margin-bottom: rem(30);
             }
         }
     }

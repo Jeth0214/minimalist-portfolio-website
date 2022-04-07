@@ -7,3 +7,11 @@
     }
     
 }
+
+section {
+    margin-bottom: rem(80);
+    @include breakpoint-up('medium') {
+        margin-bottom: rem(150);
+    }
+   
+}

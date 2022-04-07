@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://reliable-sunburst-ffc76e.netlify.app/index.html)
+- Solution URL: [My soluttion](https://www.frontendmentor.io/solutions/minimalist-portfolio-using-html-css-javascript-Syd22J3Qc)
+- Live Site URL: [Live Site](https://fe-minimalist-portfolio.netlify.app/)
 
 ## My process
 

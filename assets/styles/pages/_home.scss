@@ -8,11 +8,11 @@
 
     .banner__heading {
         margin-top: rem(24);
+        background-color: var(--clr-very-light-gray);
         @include breakpoint-up('medium'){
             position: absolute;
             bottom: 0;
             width: 445px;
-            background-color: white;
             padding: 56px 56px 23px 0;
         }
     }
@@ -23,12 +23,13 @@
     margin-top: rem(96);
     @include breakpoint-up('medium'){
         display: flex;
-        justify-content: space-between;
+        gap: rem(125);
+       // justify-content: space-between;
        // align-items: flex-end;
     }
     .about__image {
         @include breakpoint-up('medium'){
-            width: 40%;
+            width: 50%;
             
         }
         img {
@@ -41,7 +42,7 @@
         border-bottom: 1px solid var(--clr-light-gray);
         padding: rem(30) 0;
         @include breakpoint-up('medium'){
-            width: 50%;
+            width: 30%;
             margin-top: 0;
         }
         p {
@@ -52,7 +53,7 @@
 
 
 #contact-me {
-    padding: rem(80) 0;
+    padding: rem(60) 0;
     text-align: center;
     @include breakpoint-up('medium') {
         display: flex;

@@ -397,6 +397,11 @@ p {
 .main {
   margin-top: 6.5rem;
 }
+@media (min-width: 48em) {
+  .main {
+    margin-top: 9.25rem;
+  }
+}
 
 section {
   margin-bottom: 5rem;

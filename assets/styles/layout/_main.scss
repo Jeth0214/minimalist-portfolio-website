@@ -2,7 +2,9 @@
 
 .main {
     margin-top: rem(104); 
-    
+    @include breakpoint-up('medium') {
+        margin-top: rem(148);
+    }
     
 }
 

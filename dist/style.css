@@ -474,7 +474,7 @@ section {
 .banner {
   position: relative;
 }
-.banner #banner__image {
+.banner .banner__image {
   width: 100%;
 }
 .banner .banner__heading {
@@ -524,7 +524,6 @@ section {
 }
 
 #contact-me {
-  padding: 3.75rem 0;
   text-align: center;
 }
 @media (min-width: 48em) {
@@ -661,8 +660,8 @@ section {
 #project .project__details .project__background {
   flex: 1;
 }
-#project .project__details .project__background img + img {
-  margin-top: 1.875rem;
+#project .project__details .project__background .project__preview-image + .project__preview-image {
+  margin-bottom: 1.875rem;
 }
 #project .links {
   margin-top: 4rem;

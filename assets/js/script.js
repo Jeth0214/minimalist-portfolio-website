@@ -29,7 +29,7 @@ function toggleMenu(){
 
 
 function scrollFunction() {
-   console.log(window.innerWidth);
+  // console.log(window.innerWidth);
 
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
         header.style.backgroundColor = "hsl(240, 2%, 92%)";

@@ -2,20 +2,25 @@ const portfolio = document.querySelector("#project");
 let url = window.location.href;
 
 
-async function renderProjectsToTheView(width){
-    let response  = await fetch("../assets/json/projects.json");
-    if(response.status === 200){
-        data = await response.text()
-    }else {
-        console.log("Error", response.statusText)
+async function renderProjectsToTheView(){
+    try {
+        let response = await fetch("../assets/json/projects.json");
+
+        if (response.status === 200) {
+            data = await response.text();
+        } else {
+            throw new Error(`Error: ${response.statusText}`);
+        }
+
+        projects = JSON.parse(data);
+        getProjectsData(projects);
+    } catch (error) {
+        console.log(error);
     }
-    projects = JSON.parse(data);
-    device = checkDevice(width);
-    getProjectsData(projects, device)
 }
 
 
-const getProjectsData = (projects, device) => {
+const getProjectsData = (projects) => {
     let project = projects.filter ( proj => {return url.search(proj.name.toLowerCase()) > -1})[0];
     let index = projects.map( proj => proj.name).indexOf(project.name);
     let nextPrev = nextPreviousData(index, projects);
@@ -24,10 +29,12 @@ const getProjectsData = (projects, device) => {
         if(project){
          output += `
         <div class="project">
-            <div class="project__cover-image">
-                <img src="../assets/images/detail/${device}/image-${project.name.toLowerCase()}-hero@2x.jpg" alt="${project.name}" alt="${project.name}">
-            </div>
-            
+            <picture class="project__cover-image">
+                <source media="(min-width: 1110px)" srcset="../assets/images/detail/desktop/image-${project.name.toLowerCase()}-hero@2x.jpg">
+                <source media="(min-width: 768px)" srcset="../assets/images/detail/tablet/image-${project.name.toLowerCase()}-hero@2x.jpg">
+                <img src="../assets/images/detail/mobile/image-${project.name.toLowerCase()}-hero@2x.jpg" alt="${project.name}" >
+            </picture>
+
             <div class="project__details">
                 <div class="project__description border border--no-side">
                     <h1>${project.name}</h1>
@@ -44,8 +51,16 @@ const getProjectsData = (projects, device) => {
                     <p>${project.background}</p>
                     <div class="project__preview">
                         <h3>Static Preview</h3>
-                        <img src="../assets/images/detail/${device}/image-${project.name.toLowerCase()}-preview-1@2x.jpg" alt="${project.name}">
-                        <img src="../assets/images/detail/${device}/image-${project.name.toLowerCase()}-preview-2@2x.jpg" alt="${project.name}">
+                        <picture class="project__preview-image">
+                            <source media="(min-width: 1110px)" srcset="../assets/images/detail/desktop/image-${project.name.toLowerCase()}-preview-1@2x.jpg">
+                            <source media="(min-width: 768px)" srcset="../assets/images/detail/tablet/image-${project.name.toLowerCase()}-preview-1@2x.jpg">
+                            <img src="../assets/images/detail/mobile/image-${project.name.toLowerCase()}-preview-1@2x.jpg" alt="${project.name}">
+                        </picture>
+                        <picture class="project__preview-image">
+                            <source media="(min-width: 1110px)" srcset="../assets/images/detail/desktop/image-${project.name.toLowerCase()}-preview-2@2x.jpg">
+                            <source media="(min-width: 768px)" srcset="../assets/images/detail/tablet/image-${project.name.toLowerCase()}-preview-2@2x.jpg">
+                            <img src="../assets/images/detail/mobile/image-${project.name.toLowerCase()}-preview-2@2x.jpg" alt="${project.name}">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -92,23 +107,10 @@ const nextPreviousData = (index, projects) => {
     return name;
 }
 
-const checkDevice = (width) => {
-    let device = "";
-    if(width < 376){
-        device = "mobile"
-    }else if(width > 375 && width < 1150) {
-            device = "tablet";
-    }else if(width > 1151) {
-        device = "desktop";
-    }
-    return device;
-}
 
 
 window.onload = () => {
-    renderProjectsToTheView(window.innerWidth);
+    renderProjectsToTheView();
 }
-window.onresize = () => {
-    renderProjectsToTheView(window.innerWidth);
-}
+
 

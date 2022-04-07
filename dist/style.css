@@ -722,7 +722,7 @@ p {
 #contact .contact__form {
   padding: 24px 0;
 }
-#contact .contact__form h2, #contact .contact__message h2 {
+#contact .contact__form h1, #contact .contact__form h2, #contact .contact__message h1, #contact .contact__message h2 {
   flex: 1;
 }
 #contact .contact__form div, #contact .contact__message div {

@@ -34,6 +34,7 @@ body {
   font-size: 16px;
   font-family: var(--ff-public-sans);
   color: var(--clr-very-dark-blue);
+  background-color: var(--clr-very-light-gray);
 }
 
 a,
@@ -396,9 +397,13 @@ p {
 .main {
   margin-top: 6.5rem;
 }
+
+section {
+  margin-bottom: 5rem;
+}
 @media (min-width: 48em) {
-  .main {
-    margin-top: 9.25rem;
+  section {
+    margin-bottom: 9.375rem;
   }
 }
 

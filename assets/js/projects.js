@@ -40,7 +40,7 @@ const getProjectsData = (projects, device) => {
                 </div>
 
                 <div class="project__background">
-                    <h3>Project Background</h3>
+                    <h2>Project Background</h2>
                     <p>${project.background}</p>
                     <div class="project__preview">
                         <h3>Static Preview</h3>
